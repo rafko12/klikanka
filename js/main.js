@@ -63,7 +63,7 @@ const removeWin = () => {
 
 const pressKey = () => {
 	timer.style.color = 'black'
-	gameCountdown = 10 //czas gry
+	gameCountdown = 7 //czas gry
 	lottery()
 	countdown()
 
