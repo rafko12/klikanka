@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.topMenu {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  width: 100%;
+}
+.topMenu__line {
+  display: flex;
+  flex-direction: row;
+}
+.topMenu .day-nightBtn {
+  position: absolute;
+  right: 0;
+  padding: 2px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+}
+.keyboard__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.keyboard__top .start {
+  padding: 30px 50px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border: none;
+}
+.keyboard__top .start:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+.keyboard__top .start:active {
+  border: 1px solid black;
+}
+.keyboard__top .timer {
+  position: relative;
+  font-size: 100px;
+}
+.keyboard .keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 50%;
+  width: 100%;
+  padding: 10%;
+}
+.keyboard .key {
+  font-size: 2em;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.keyboard .key--active {
+  background-color: rgba(0, 183, 255, 0.347);
+}
+.keyboard .key--win {
+  background-color: rgba(17, 255, 0, 0.347);
+}
+.keyboard .key--lost {
+  background-color: rgba(255, 0, 0, 0.347);
+}
+.keyboard .key:active {
+  background-color: rgba(225, 255, 0, 0.085);
+}
+.keyboard .hidden {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

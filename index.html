@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Klikanie game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <section class="topMenu">
+        <div class="topMenu__points topMenu__line">
+            <p class="topMenu__points-title">Liczba punktów: </p>
+            <div class=" topMenu__points-point" id="point">0
+            </div>
+            <button class='day-nightBtn'><i class="ti ti-moon-filled"></i></button>
+        </div>
+        <div class="topMenu__lastPoint topMenu__line">
+            <p class="topMenu__points-title">Ostatni wynik: </p>
+            <div class=" topMenu__points-point" id="lastPoint">0
+            </div>
+        </div>
+        <div class="topMenu__record topMenu__line">
+            <p class="topMenu__record-title">Twój rekord: </p>
+            <div class="topMenu__record-time" id="record">0</div>
+        </div>
+    </section>
+    <section class="keyboard">
+        <div class="keyboard__top">
+            <button class="start">START</button>
+            <div class="timer hidden">3</div>
+        </div>
+
+        <div class="keys">
+            <button class="key key7">7</button>
+            <button class="key key8">8</button>
+            <button class="key key9">9</button>
+            <button class="key key4">4</button>
+            <button class="key key5">5</button>
+            <button class="key key6">6</button>
+            <button class="key key1">1</button>
+            <button class="key key2">2</button>
+            <button class="key key3">3</button>
+        </div>
+
+
+    </section>
+
+
+    <section class="yourKey"></section>
+
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

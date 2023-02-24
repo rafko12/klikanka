@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.topMenu {
+	display: flex;
+	flex-direction: column;
+	height: 10vh;
+	width: 100%;
+
+	&__line {
+		display: flex;
+		flex-direction: row;
+	}
+	.day-nightBtn {
+		position: absolute;
+		right: 0;
+		padding: 2px;
+		border: none;
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+.keyboard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 90vh;
+	width: 100%;
+
+	&__top {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50%;
+		.start {
+			padding: 30px 50px;
+			background-color: rgba(128, 128, 128, 0.2);
+			border: none;
+		}
+		.start:hover {
+			background-color: rgba(128, 128, 128, 0.4);
+		}
+		.start:active {
+			border: 1px solid black;
+		}
+		.timer {
+			position: relative;
+			font-size: 100px;
+		}
+	}
+
+	.keys {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 10px;
+		height: 50%;
+		width: 100%;
+		padding: 10%;
+	}
+	.key {
+		font-size: 2em;
+		border: none;
+		background-color: rgba(128, 128, 128, 0.2);
+
+		&--active {
+			background-color: rgba(0, 183, 255, 0.347);
+		}
+
+		&--win {
+			background-color: rgba(17, 255, 0, 0.347);
+		}
+
+		&--lost {
+			background-color: rgba(255, 0, 0, 0.347);
+		}
+
+		&:active {
+			background-color: rgba(225, 255, 0, 0.085);
+		}
+	}
+	.hidden {
+		display: none;
+	}
+}
