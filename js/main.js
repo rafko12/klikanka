@@ -50,22 +50,10 @@ const countdown = () => {
 
 			actualPoint = 0
 			points.innerHTML = actualPoint
-			startBtn() //zaczynamy od nowa
+			startBtn()
 		}
 	}, 1000)
 }
-
-//usunięcie zaznaczonych pól po prawidłowym oznaczeniu
-const removeWin = () => {
-	winKey.classList.remove('key--win')
-	for (let z = 0; z < lostKey.length; z++) {
-		lostKey[z].classList.remove('key--lost')
-	}
-	lottery()
-}
-
-//usuwa aktywne pola
-// const removeActive = () => {}
 
 const game = () => {
 	timer.style.color = '#dadadae6'
@@ -79,14 +67,27 @@ const game = () => {
 			if (keys[i].classList.contains('key--active') === true) {
 				keys[i].classList.remove('key--active')
 				keys[i].classList.add('key--win')
-				actualPoint += 1
-				points.innerHTML = actualPoint
-				winKey = document.querySelector('.key--win')
-				lostKey = document.querySelectorAll('.key--lost')
-				removeWin()
+				playgame()
 			}
 		})
 	}
+}
+
+const playgame = () => {
+	actualPoint += 1
+	points.innerHTML = actualPoint
+	winKey = document.querySelector('.key--win')
+	lostKey = document.querySelectorAll('.key--lost')
+	removeWin()
+}
+
+//usunięcie zaznaczonych pól po prawidłowym oznaczeniu
+const removeWin = () => {
+	winKey.classList.remove('key--win')
+	for (let z = 0; z < lostKey.length; z++) {
+		lostKey[z].classList.remove('key--lost')
+	}
+	lottery()
 }
 
 //funkcja naciśnięcia przycisku START

@@ -1,44 +1,31 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #0066ff;
-  color: #dadadae6;
+  background-color: rgb(0, 102, 255);
+  color: rgba(218, 218, 218, 0.9019607843);
   background-image: url("../img/bg-small.jpg");
   background-position: 40% 40%;
   background-repeat: no-repeat;
 }
 
 .topMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 10vh;
   width: 100%;
   padding: 2%;
-  text-shadow: 1px 1px 5px #00000094;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5803921569);
 }
-
 .topMenu__line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .topMenu .day-nightBtn {
   position: absolute;
   right: 0;
@@ -46,7 +33,6 @@ body {
   border: none;
   background-color: rgba(255, 255, 255, 0);
 }
-
 .topMenu__corner {
   position: absolute;
   top: 0;
@@ -56,7 +42,6 @@ body {
   overflow: hidden;
   z-index: -100;
 }
-
 .topMenu__corner .sun {
   position: absolute;
   top: -50px;
@@ -64,73 +49,48 @@ body {
   height: 100px;
   width: 100px;
   border-radius: 100%;
-  background-color: #ecec0e;
+  background-color: rgb(236, 236, 14);
   z-index: -100;
   overflow: hidden;
 }
 
 .keyboard {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 90vh;
   width: 100%;
 }
-
 .keyboard__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 50%;
 }
-
 .keyboard__top .start {
   padding: 30px 50px;
   background-color: rgba(204, 204, 204, 0.4);
   border: none;
-  color: #dadadae6;
+  color: rgba(218, 218, 218, 0.9019607843);
   text-shadow: 2px 2px 11px #000000;
-  -webkit-box-shadow: 2px 2px 11px #000000;
-          box-shadow: 2px 2px 11px #000000;
+  box-shadow: 2px 2px 11px #000000;
 }
-
 .keyboard__top .start:hover {
   background-color: rgba(204, 204, 204, 0.5);
 }
-
 .keyboard__top .start:active {
   border: 1px solid black;
   color: black;
 }
-
 .keyboard__top .timer {
   position: relative;
   font-size: 100px;
 }
-
 .keyboard .keys {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
   height: 50%;
   width: 100%;
@@ -141,7 +101,6 @@ body {
   background-size: 15%;
   background-attachment: fixed;
 }
-
 .keyboard .key {
   border: none;
   background-color: rgba(128, 128, 128, 0);
@@ -149,25 +108,21 @@ body {
   background-position: 50% -12px;
   background-repeat: no-repeat;
   background-size: contain;
-  color: #dadadae6;
+  color: rgba(218, 218, 218, 0.9019607843);
   font-size: 1.5em;
   z-index: 1;
 }
-
 .keyboard .key--active {
   background-image: url("../img/molemound.png");
   background-position: center;
-  z-index: 0;
+  color: rgba(0, 0, 0, 0);
 }
-
 .keyboard .key--win {
   background-color: rgba(17, 255, 0, 0.507);
 }
-
 .keyboard .key--lost {
-  background-color: #ff000093;
+  background-color: rgba(255, 0, 0, 0.5764705882);
 }
-
 .keyboard .key:active {
   background-color: rgba(225, 255, 0, 0.085);
 }
@@ -175,4 +130,15 @@ body {
 .hidden {
   display: none;
 }
-/*# sourceMappingURL=main.css.map */
+
+@media (min-width: 480px) {
+  body {
+    background-image: url("../img/bg-big.jpg");
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("../img/bg-big.jpg");
+  }
+}/*# sourceMappingURL=main.css.map */
