@@ -70,7 +70,7 @@ const removeWin = () => {
 const pressKey = () => {
 	timer.style.color = 'black'
 	gameCountdown = 7 //czas gry
-	soundStart.play()
+	// soundStart.play()
 	lottery()
 	countdown()
 
@@ -79,14 +79,14 @@ const pressKey = () => {
 			if (keys[i].classList.contains('key--active') === true) {
 				keys[i].classList.remove('key--active')
 				keys[i].classList.add('key--win')
-				soundMole.play()
+				// soundMole.play()
 				actualPoint += 1
 				points.innerHTML = actualPoint
 				winKey = document.querySelector('.key--win')
 				lostKey = document.querySelectorAll('.key--lost')
 				removeWin()
 			} else {
-				soundPick.play()
+				// soundPick.play()
 				// keys[i].classList.add('key--lost')
 				// setTimeout(function () {
 				// 	//funcka kasuje czerwone pola po 1 sekundzie
@@ -99,15 +99,15 @@ const pressKey = () => {
 
 const startBtn = () => {
 	timer.innerHTML = '3'
-	soundPeak.play()
+	// soundPeak.play()
 	timer.style.color = 'red'
 	setTimeout(function () {
 		timer.innerHTML = '2'
-		soundPeak.play()
+		// soundPeak.play()
 	}, 1000)
 	setTimeout(function () {
 		timer.innerHTML = '1'
-		soundPeak.play()
+		// soundPeak.play()
 	}, 2000)
 	setTimeout(pressKey, 3000)
 }
