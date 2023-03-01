@@ -1,9 +1,16 @@
+@import './colors';
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	background-color: $sky;
+	color: $numbersKey;
 }
 
 .topMenu {
@@ -23,6 +30,26 @@
 		border: none;
 		background-color: rgba(255, 255, 255, 0);
 	}
+	&__corner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: -100;
+		.sun {
+			position: absolute;
+			top: -50px;
+			right: -50px;
+			height: 100px;
+			width: 100px;
+			border-radius: 100%;
+			background-color: $sun;
+			z-index: -100;
+			overflow: hidden;
+		}
+	}
 }
 
 .keyboard {
@@ -40,14 +67,16 @@
 		height: 50%;
 		.start {
 			padding: 30px 50px;
-			background-color: rgba(128, 128, 128, 0.2);
+			background-color: $startBtn;
 			border: none;
+			color: $numbersKey;
 		}
 		.start:hover {
-			background-color: rgba(128, 128, 128, 0.4);
+			background-color: $startBtnHov;
 		}
 		.start:active {
 			border: 1px solid black;
+			color: black;
 		}
 		.timer {
 			position: relative;
@@ -63,29 +92,44 @@
 		height: 50%;
 		width: 100%;
 		padding: 10%;
+		background-color: $grass;
+		background-image: url('../img/grass.png');
+		background-position: center;
+		background-repeat: space;
+		background-size: 15%;
+		background-attachment: fixed;
 	}
 	.key {
-		font-size: 2em;
 		border: none;
-		background-color: rgba(128, 128, 128, 0.2);
+		background-color: rgba(128, 128, 128, 0);
+		background-image: url('../img/mound.png');
+		background-position: 50% -12px;
+		background-repeat: no-repeat;
+		background-size: contain;
 
+		color: $numbersKey;
+		font-size: 1.5em;
+		z-index: 1;
 		&--active {
-			background-color: rgba(0, 183, 255, 0.347);
+			background-image: url('../img/molemound.png');
+			background-position: center;
+			z-index: 0;
 		}
 
 		&--win {
-			background-color: rgba(17, 255, 0, 0.347);
+			background-color: $keyWin;
 		}
 
 		&--lost {
-			background-color: rgba(255, 0, 0, 0.347);
+			background-color: $keyLost;
 		}
 
 		&:active {
-			background-color: rgba(225, 255, 0, 0.085);
+			background-color: $keyClick;
 		}
 	}
-	.hidden {
-		display: none;
-	}
+}
+
+.hidden {
+	display: none;
 }
