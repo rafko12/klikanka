@@ -26,8 +26,8 @@ const soundMole = new Audio('../sounds/mole.mp3')
 const record = document.querySelector('#record')
 let yourRecord = 0
 
-//losowa aktywacja pól
 const lottery = () => {
+	//loteria
 	keys[Math.floor(Math.random() * 8)].classList.add('key--active')
 }
 
@@ -67,10 +67,10 @@ const removeWin = () => {
 //usuwa aktywne pola
 // const removeActive = () => {}
 
-const game = () => {
-	timer.style.color = '#dadadae6'
+const pressKey = () => {
+	timer.style.color = 'black'
 	gameCountdown = 7 //czas gry
-
+	// soundStart.play()
 	lottery()
 	countdown()
 
@@ -79,35 +79,44 @@ const game = () => {
 			if (keys[i].classList.contains('key--active') === true) {
 				keys[i].classList.remove('key--active')
 				keys[i].classList.add('key--win')
+				// soundMole.play()
 				actualPoint += 1
 				points.innerHTML = actualPoint
 				winKey = document.querySelector('.key--win')
 				lostKey = document.querySelectorAll('.key--lost')
 				removeWin()
+			} else {
+				// soundPick.play()
+				// keys[i].classList.add('key--lost')
+				// setTimeout(function () {
+				// 	//funcka kasuje czerwone pola po 1 sekundzie
+				// 	keys[i].classList.remove('key--lost')
+				// }, 1000)
 			}
 		})
 	}
 }
 
+const startBtn = () => {
+	timer.innerHTML = '3'
+	// soundPeak.play()
+	timer.style.color = 'red'
+	setTimeout(function () {
+		timer.innerHTML = '2'
+		// soundPeak.play()
+	}, 1000)
+	setTimeout(function () {
+		timer.innerHTML = '1'
+		// soundPeak.play()
+	}, 2000)
+	setTimeout(pressKey, 3000)
+}
 //funkcja naciśnięcia przycisku START
 start.addEventListener('click', () => {
 	start.classList.add('hidden')
 	timer.classList.remove('hidden')
 	startBtn()
 })
-
-//funkcja po nacisnieciu przycisku START
-const startBtn = () => {
-	timer.innerHTML = '3'
-	timer.style.color = '#ff000093'
-	setTimeout(function () {
-		timer.innerHTML = '2'
-	}, 1000)
-	setTimeout(function () {
-		timer.innerHTML = '1'
-	}, 2000)
-	setTimeout(game, 3000)
-}
 
 //zapis rekordu
 const recordSave = () => {

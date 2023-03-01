@@ -1,12 +1,12 @@
-$grass: rgb(16, 155, 16);
+$grass: rgba(16, 155, 16, 0);
 $sky: rgb(0, 102, 255);
 $sun: rgb(236, 236, 14);
-$numbersKey: rgba(218, 218, 218, 0.712);
+$numbersKey: #dadadae6;
 
-$startBtn: rgba(204, 204, 204, 0.3);
+$startBtn: rgba(204, 204, 204, 0.4);
 $startBtnHov: rgba(204, 204, 204, 0.5);
 
-$keyActive: rgba(0, 183, 255, 0.658);
+$keyActive: #00b7ffa8;
 $keyWin: rgba(17, 255, 0, 0.507);
-$keyLost: rgba(255, 0, 0, 0.575);
+$keyLost: #ff000093;
 $keyClick: rgba(225, 255, 0, 0.085);
