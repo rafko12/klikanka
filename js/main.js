@@ -13,7 +13,6 @@ const nightBtn = document.querySelector('.night-btn')
 const start = document.querySelector('.start')
 const timer = document.querySelector('.timer')
 const points = document.querySelector('#point')
-let winKey = document.querySelector('.key--win')
 let lostKey = document.querySelectorAll('.key--lost')
 let actualPoint = 0
 
@@ -66,24 +65,51 @@ const game = () => {
 		keys[i].addEventListener('click', () => {
 			if (keys[i].classList.contains('key--active') === true) {
 				keys[i].classList.remove('key--active')
-				keys[i].classList.add('key--win')
 				playgame()
 			}
 		})
 	}
-}
 
+	document.addEventListener('keydown', e => {
+		if (e.keyCode == 97 && keys[6].classList.contains('key--active') === true) {
+			keys[6].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 98 && keys[7].classList.contains('key--active') === true) {
+			keys[7].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 99 && keys[8].classList.contains('key--active') === true) {
+			keys[8].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 100 && keys[3].classList.contains('key--active') === true) {
+			keys[3].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 101 && keys[4].classList.contains('key--active') === true) {
+			keys[4].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 102 && keys[5].classList.contains('key--active') === true) {
+			keys[5].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 103 && keys[0].classList.contains('key--active') === true) {
+			keys[0].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 104 && keys[1].classList.contains('key--active') === true) {
+			keys[1].classList.remove('key--active')
+			playgame()
+		} else if (e.keyCode == 105 && keys[2].classList.contains('key--active') === true) {
+			keys[2].classList.remove('key--active')
+			playgame()
+		}
+	})
+}
 const playgame = () => {
 	actualPoint += 1
 	points.innerHTML = actualPoint
-	winKey = document.querySelector('.key--win')
-	lostKey = document.querySelectorAll('.key--lost')
 	removeWin()
 }
 
 //usunięcie zaznaczonych pól po prawidłowym oznaczeniu
 const removeWin = () => {
-	winKey.classList.remove('key--win')
+	lostKey = document.querySelectorAll('.key--lost')
 	for (let z = 0; z < lostKey.length; z++) {
 		lostKey[z].classList.remove('key--lost')
 	}

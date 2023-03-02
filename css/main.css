@@ -4,10 +4,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
-  background-color: rgb(0, 102, 255);
   color: rgba(218, 218, 218, 0.9019607843);
   background-image: url("../img/bg-small.jpg");
   background-position: 40% 40%;
@@ -72,6 +72,7 @@ body {
   padding: 30px 50px;
   background-color: rgba(204, 204, 204, 0.4);
   border: none;
+  border-radius: 5px;
   color: rgba(218, 218, 218, 0.9019607843);
   text-shadow: 2px 2px 11px #000000;
   box-shadow: 2px 2px 11px #000000;
@@ -137,8 +138,18 @@ body {
     background-size: cover;
   }
 }
+@media (min-width: 600px) {
+  .keyboard .keys {
+    height: 60%;
+  }
+}
 @media (min-width: 768px) {
   body {
     background-image: url("../img/bg-big.jpg");
+    background-position: 50% 38%;
+  }
+  .keyboard .keys {
+    padding: 5%;
+    height: 50%;
   }
 }/*# sourceMappingURL=main.css.map */

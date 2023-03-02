@@ -6,10 +6,11 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	outline: none;
 }
 
 body {
-	background-color: $sky;
+	// background-color: $sky;
 	color: $numbersKey;
 	background-image: url('../img/bg-small.jpg');
 	background-position: 40% 40%;
@@ -75,6 +76,8 @@ body {
 			padding: 30px 50px;
 			background-color: $startBtn;
 			border: none;
+			border-radius: 5px;
+
 			color: $numbersKey;
 			text-shadow: 2px 2px 11px #000000;
 			box-shadow: 2px 2px 11px #000000;
@@ -147,14 +150,23 @@ body {
 	}
 }
 
-// @media (min-width: 600px) {
-// 	.keys {
-
-// 	}
-// }
+@media (min-width: 600px) {
+	.keyboard {
+		.keys {
+			height: 60%;
+		}
+	}
+}
 
 @media (min-width: 768px) {
 	body {
 		background-image: url('../img/bg-big.jpg');
+		background-position: 50% 38%;
+	}
+	.keyboard {
+		.keys {
+			padding: 5%;
+			height: 50%;
+		}
 	}
 }
