@@ -123,6 +123,15 @@ start.addEventListener('click', () => {
 	startBtn()
 })
 
+document.addEventListener('keyup', e => {
+	if (start.classList.contains('hidden') !== true && e.key === 'Enter') {
+		start.classList.add('hidden')
+		timer.classList.remove('hidden')
+		startBtn()
+		return
+	}
+})
+
 //funkcja po nacisnieciu przycisku START
 const startBtn = () => {
 	timer.innerHTML = '3'
